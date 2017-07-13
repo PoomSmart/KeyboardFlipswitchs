@@ -1,0 +1,9 @@
+Package: org.thebigboss.keyboardflipswitchs
+Name: Keyboard Flipswitchs
+Depends: mobilesubstrate, com.a3tweaks.flipswitch, firmware (>= 5.0)
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Toggles for Keyboard settings.
+Maintainer: PoomSmart
+Author: PoomSmart
+Section: Addons (Flipswitch)
