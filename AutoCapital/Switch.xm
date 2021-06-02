@@ -21,4 +21,10 @@ static const CFStringRef KeyboardAutocapitalization = CFSTR("KeyboardAutocapital
 	setKeyboardPrefValue(KeyboardAutocapitalization, newState);
 }
 
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
+{
+	NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard#KeyboardAutocapitalization"];
+	[[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
+}
+
 @end

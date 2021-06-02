@@ -21,4 +21,10 @@ static const CFStringRef KeyboardCapsLock = CFSTR("KeyboardCapsLock");
 	setKeyboardPrefValue(KeyboardCapsLock, newState);
 }
 
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
+{
+	NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard#KeyboardCapsLock"];
+	[[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
+}
+
 @end

@@ -21,4 +21,10 @@ static const CFStringRef KeyboardPeriodShortcut = CFSTR("KeyboardPeriodShortcut"
 	setKeyboardPrefValue(KeyboardPeriodShortcut, newState);
 }
 
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
+{
+	NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard#KeyboardPeriodShortcut"];
+	[[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
+}
+
 @end

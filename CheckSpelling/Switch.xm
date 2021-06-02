@@ -21,4 +21,10 @@ static const CFStringRef KeyboardCheckSpelling = CFSTR("KeyboardCheckSpelling");
 	setKeyboardPrefValue(KeyboardCheckSpelling, newState);
 }
 
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
+{
+	NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard#KeyboardCheckSpelling"];
+	[[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
+}
+
 @end
