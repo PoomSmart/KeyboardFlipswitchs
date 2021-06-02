@@ -1,12 +1,9 @@
-SDKVERSION = 7.0
-ARCHS = armv7 arm64
+include $(THEOS)/makefiles/common.mk
 
-include ../theos/makefiles/common.mk
-
-BUNDLE_NAME = DotShortcut
-DotShortcut_FILES = Switch.xm
-DotShortcut_LIBRARIES = flipswitch
-DotShortcut_FRAMEWORKS = UIKit
-DotShortcut_INSTALL_PATH = /Library/Switches
+BUNDLE_NAME = DotShortcutFS
+DotShortcutFS_FILES = Switch.xm
+DotShortcutFS_LIBRARIES = flipswitch
+DotShortcutFS_FRAMEWORKS = UIKit
+DotShortcutFS_INSTALL_PATH = /Library/Switches
 
 include $(THEOS_MAKE_PATH)/bundle.mk

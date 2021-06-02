@@ -9,20 +9,17 @@ static const CFStringRef KeyboardAutocorrection = CFSTR("KeyboardAutocorrection"
 
 @implementation AutoCorrectSwitch
 
-- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier {
 	return getKeyboardPrefValue(KeyboardAutocorrection);
 }
 
-- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier {
 	if (newState == FSSwitchStateIndeterminate)
 		return;
 	setKeyboardPrefValue(KeyboardAutocorrection, newState);
 }
 
-- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier {
 	NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard#KeyboardAutocorrection"];
 	[[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
 }

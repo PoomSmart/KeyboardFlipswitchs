@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>AutoCorrect</string>
+	<string>AutoCorrectFS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.PS.AutoCorrect</string>
+	<string>com.PS.AutoCorrectFS</string>
 	<key>CFBundleDisplayName</key>
 	<string>Auto Correct</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -22,8 +22,6 @@
 	<string>1.0</string>
 	<key>DTPlatformName</key>
 	<string>iphoneos</string>
-	<key>MinimumOSVersion</key>
-	<string>3.0</string>
 	<key>NSPrincipalClass</key>
 	<string>AutoCorrectSwitch</string>
 </dict>

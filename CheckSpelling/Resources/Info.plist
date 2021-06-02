@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>CheckSpelling</string>
+	<string>CheckSpellingFS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.PS.CheckSpelling</string>
+	<string>com.PS.CheckSpellingFS</string>
 	<key>CFBundleDisplayName</key>
 	<string>Check Spelling</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -22,8 +22,6 @@
 	<string>1.0</string>
 	<key>DTPlatformName</key>
 	<string>iphoneos</string>
-	<key>MinimumOSVersion</key>
-	<string>3.0</string>
 	<key>NSPrincipalClass</key>
 	<string>CheckSpellingSwitch</string>
 </dict>

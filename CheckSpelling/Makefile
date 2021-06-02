@@ -1,12 +1,9 @@
-SDKVERSION = 7.0
-ARCHS = armv7 arm64
+include $(THEOS)/makefiles/common.mk
 
-include ../theos/makefiles/common.mk
-
-BUNDLE_NAME = CheckSpelling
-CheckSpelling_FILES = Switch.xm
-CheckSpelling_LIBRARIES = flipswitch
-CheckSpelling_FRAMEWORKS = UIKit
-CheckSpelling_INSTALL_PATH = /Library/Switches
+BUNDLE_NAME = CheckSpellingFS
+CheckSpellingFS_FILES = Switch.xm
+CheckSpellingFS_LIBRARIES = flipswitch
+CheckSpellingFS_FRAMEWORKS = UIKit
+CheckSpellingFS_INSTALL_PATH = /Library/Switches
 
 include $(THEOS_MAKE_PATH)/bundle.mk

@@ -9,20 +9,17 @@ static const CFStringRef KeyboardCapsLock = CFSTR("KeyboardCapsLock");
 
 @implementation CapsLockSwitch
 
-- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier {
 	return getKeyboardPrefValue(KeyboardCapsLock);
 }
 
-- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier {
 	if (newState == FSSwitchStateIndeterminate)
 		return;
 	setKeyboardPrefValue(KeyboardCapsLock, newState);
 }
 
-- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier {
 	NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard#KeyboardCapsLock"];
 	[[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
 }

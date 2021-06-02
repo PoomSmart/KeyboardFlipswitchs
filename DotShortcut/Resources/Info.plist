@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>DotShortcut</string>
+	<string>DotShortcutFS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.PS.DotShortcut</string>
+	<string>com.PS.DotShortcutFS</string>
 	<key>CFBundleDisplayName</key>
 	<string>Period Shortcut</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -22,8 +22,6 @@
 	<string>1.0</string>
 	<key>DTPlatformName</key>
 	<string>iphoneos</string>
-	<key>MinimumOSVersion</key>
-	<string>3.0</string>
 	<key>NSPrincipalClass</key>
 	<string>DotShortcutSwitch</string>
 </dict>

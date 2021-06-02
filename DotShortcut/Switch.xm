@@ -9,20 +9,17 @@ static const CFStringRef KeyboardPeriodShortcut = CFSTR("KeyboardPeriodShortcut"
 
 @implementation DotShortcutSwitch
 
-- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (FSSwitchState)stateForSwitchIdentifier:(NSString *)switchIdentifier {
 	return getKeyboardPrefValue(KeyboardPeriodShortcut);
 }
 
-- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier {
 	if (newState == FSSwitchStateIndeterminate)
 		return;
 	setKeyboardPrefValue(KeyboardPeriodShortcut, newState);
 }
 
-- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier
-{
+- (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier {
 	NSURL *url = [NSURL URLWithString:@"prefs:root=General&path=Keyboard#KeyboardPeriodShortcut"];
 	[[FSSwitchPanel sharedPanel] openURLAsAlternateAction:url];
 }
